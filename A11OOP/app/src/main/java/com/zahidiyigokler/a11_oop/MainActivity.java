@@ -3,12 +3,6 @@ package com.zahidiyigokler.a11_oop;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,11 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         /*
         User myUser = new User();
@@ -39,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(myUser.name);
 
         // Encapsulation
-
         Musician james = new Musician("James","Guitar",50);
         System.out.println(james.getName());
         james.setAge(60,"Zalef");
@@ -51,25 +39,20 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(lars.getAge());
 
         // Polymorphism
-
         // Static Polymorphism
-
         Mathematics mathematics=new Mathematics();
         System.out.println(mathematics.sum());
         System.out.println(mathematics.sum(5,3));
         System.out.println(mathematics.sum(5,3,4));
 
         // Dynamic Polymorphism
-
         Animal myAnimal = new Animal();
         myAnimal.sing();
-
         Dog barley = new Dog();
         barley.test();
         barley.sing();
 
         // Abstract & Interface
-
         Piano myPiano = new Piano();
         myPiano.brand="Yamaha";
         myPiano.digital=true;

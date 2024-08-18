@@ -19,7 +19,7 @@ public class Kedi implements Egitim{
         System.out.println("Benim türüm : "+turIsmi);
     }
     public void konusKedi(){
-        System.out.println("Benim ismim : "+this.isim,+"Benim türüm : "+turIsmi);
+        System.out.println("Benim ismim : "+this.isim+"Benim türüm : "+turIsmi);
     }
     @Override
     public boolean egitimAl(){
